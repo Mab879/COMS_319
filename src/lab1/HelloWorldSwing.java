@@ -37,8 +37,22 @@ public class HelloWorldSwing {
         p.add(new JLabel("Text: "));
         textField = new JTextField("Hello World!");
         p.add(textField);
-        String[] sizes = { "tiny", "small", "medium", "larage" };
+        String[] sizes = { "tiny", "small", "medium", "large" };
         JComboBox<String> combo = new JComboBox<String>(sizes);
+        combo.addActionListener(e -> {
+            JComboBox cb = (JComboBox) e.getSource();
+            String sizeName = (String) cb.getSelectedItem();
+            if (sizeName == "tiny") {
+                l.setFont(Ourfont.deriveFont((float) 8.0));
+            } else if (sizeName == "small") {
+                l.setFont(Ourfont.deriveFont((float) 12.0));
+            } else if(sizeName == "medium") {
+                l.setFont(Ourfont.deriveFont((float) 20.0));
+            }
+            else if(sizeName == "large") {
+                l.setFont(Ourfont.deriveFont((float) 24.0));
+            }
+        });
         p.add(combo);
         return p;
     }
