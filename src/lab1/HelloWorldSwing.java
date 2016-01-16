@@ -43,14 +43,15 @@ public class HelloWorldSwing {
             JComboBox cb = (JComboBox) e.getSource();
             String sizeName = (String) cb.getSelectedItem();
             if (sizeName == "tiny") {
-                l.setFont(Ourfont.deriveFont((float) 8.0));
+                l.setFont(l.getFont().deriveFont((float) 8.0));
             } else if (sizeName == "small") {
-                l.setFont(Ourfont.deriveFont((float) 12.0));
+                l.setFont(l.getFont().deriveFont((float) 12.0));
             } else if(sizeName == "medium") {
-                l.setFont(Ourfont.deriveFont((float) 20.0));
+                l.setFont(l.getFont().deriveFont((float) 20.0));
             }
             else if(sizeName == "large") {
-                l.setFont(Ourfont.deriveFont((float) 24.0));
+                l.setFont(l.getFont().deriveFont((float) 24.0));
+
             }
         });
         p.add(combo);
@@ -66,7 +67,7 @@ public class HelloWorldSwing {
         JRadioButton r4 = new JRadioButton("Bold Italic");
 
         r1.addActionListener(e -> {
-            l.setFont(Ourfont.deriveFont(Font.PLAIN));
+            l.setFont(l.getFont().deriveFont(Font.PLAIN));
             r1.setSelected(true);
             r2.setSelected(false);
             r3.setSelected(false);
@@ -74,7 +75,7 @@ public class HelloWorldSwing {
         });
 
         r2.addActionListener(e -> {
-            l.setFont(Ourfont.deriveFont(Font.BOLD));
+            l.setFont(l.getFont().deriveFont(Font.BOLD));
             r1.setSelected(false);
             r2.setSelected(true);
             r3.setSelected(false);
@@ -83,7 +84,7 @@ public class HelloWorldSwing {
 
 
         r3.addActionListener(e -> {
-            l.setFont(Ourfont.deriveFont(Font.ITALIC));
+            l.setFont(l.getFont().deriveFont(Font.ITALIC));
             r1.setSelected(false);
             r2.setSelected(false);
             r3.setSelected(true);
@@ -91,7 +92,7 @@ public class HelloWorldSwing {
         });
 
         r4.addActionListener(e -> {
-            l.setFont(Ourfont.deriveFont(Font.BOLD + Font.ITALIC));
+            l.setFont(l.getFont().deriveFont(Font.BOLD + Font.ITALIC));
             r1.setSelected(false);
             r2.setSelected(false);
             r3.setSelected(false);
