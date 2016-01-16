@@ -1,5 +1,7 @@
 package lab1;
 
+import javafx.application.Application;
+
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -103,6 +105,14 @@ public class HelloWorldSwing {
         JButton b2 = new JButton("Exit");
         p.add(b1);
         p.add(b2);
+
+        b1.addActionListener(e -> {
+            l.setText(textField.getText());
+        });
+
+        b2.addActionListener(e -> {
+            System.exit(1);
+        });
 
         return p;
     }
