@@ -1,18 +1,12 @@
 package lab1;
 
-import javafx.application.Application;
-
 import java.awt.BorderLayout;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
 public class HelloWorldSwing {
     private static JTextField textField;
     private static JLabel l;
-    private static Font Ourfont = new Font("Arial",0 ,8);
 
     public static void main(String[] args) {
         JFrame f = new JFrame("HelloWorldSwing");
@@ -24,11 +18,11 @@ public class HelloWorldSwing {
         m.add(setupTop(), BorderLayout.LINE_START);
 
         JPanel middlePanel = new JPanel();
+        middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.X_AXIS));
         middlePanel.add(setupMiddleLeft(), BorderLayout.WEST);
         middlePanel.add(setupMiddleRight(), BorderLayout.EAST);
         m.add(middlePanel);
         m.add(setupBottom());
-        f.pack();
         f.setVisible(true);
     }
 
