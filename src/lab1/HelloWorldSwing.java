@@ -49,27 +49,38 @@ public class HelloWorldSwing {
         JRadioButton r3 = new JRadioButton("Italic");
         JRadioButton r4 = new JRadioButton("Bold Italic");
 
-        r1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                l.setFont(Ourfont.deriveFont(Ourfont.getStyle() & Font.BOLD));
-                l.setFont(Ourfont.deriveFont(Ourfont.getStyle() & Font.ITALIC));
-                r1.setSelected(true);
-                r2.setSelected(false);
-                r3.setSelected(false);
-                r4.setSelected(false);
-            }});
+        r1.addActionListener(e -> {
+            l.setFont(Ourfont.deriveFont(Font.PLAIN));
+            r1.setSelected(true);
+            r2.setSelected(false);
+            r3.setSelected(false);
+            r4.setSelected(false);
+        });
 
-        r2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                l.setFont(Ourfont.deriveFont(Ourfont.getStyle() | Font.BOLD));
-                l.setFont(Ourfont.deriveFont(Ourfont.getStyle() & Font.ITALIC));
-                r1.setSelected(false);
-                r2.setSelected(true);
-                r3.setSelected(false);
-                r4.setSelected(false);
-            }});
+        r2.addActionListener(e -> {
+            l.setFont(Ourfont.deriveFont(Font.BOLD));
+            r1.setSelected(false);
+            r2.setSelected(true);
+            r3.setSelected(false);
+            r4.setSelected(false);
+        });
+
+
+        r3.addActionListener(e -> {
+            l.setFont(Ourfont.deriveFont(Font.ITALIC));
+            r1.setSelected(false);
+            r2.setSelected(false);
+            r3.setSelected(true);
+            r4.setSelected(false);
+        });
+
+        r4.addActionListener(e -> {
+            l.setFont(Ourfont.deriveFont(Font.BOLD + Font.ITALIC));
+            r1.setSelected(false);
+            r2.setSelected(false);
+            r3.setSelected(false);
+            r4.setSelected(true);
+        });
 
         p.add(r1);
         p.add(r2);
