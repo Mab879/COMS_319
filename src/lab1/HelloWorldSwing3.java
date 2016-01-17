@@ -16,7 +16,7 @@ public class HelloWorldSwing3 {
 
     public static void main(String[] args) {
         f = new JFrame("HelloWorldSwing");
-        f.setSize(370, 220);
+        f.setSize(390, 220);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel m = new JPanel();
         m.setLayout(new BoxLayout(m, BoxLayout.Y_AXIS));
@@ -133,6 +133,7 @@ public class HelloWorldSwing3 {
             public void actionPerformed(ActionEvent e) {
                 textField.setText("  ");
                 outputLabel.setText("  ");
+                t = null;
             }
         };
 
@@ -151,6 +152,7 @@ public class HelloWorldSwing3 {
 
                 }
                 t = new Timer(timeOut * 1000, a);
+                t.setRepeats(false);
                 t.start();
                 if(timeOut < 0 || timeOut > 10) {
                     errorLabel.setText("Timeout must be an integer between 1 and 10.");
