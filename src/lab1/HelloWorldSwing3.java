@@ -16,7 +16,7 @@ public class HelloWorldSwing3 {
 
     public static void main(String[] args) {
         f = new JFrame("HelloWorldSwing");
-        f.setSize(390, 220);
+        f.setSize(420, 220);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel m = new JPanel();
         m.setLayout(new BoxLayout(m, BoxLayout.Y_AXIS));
@@ -139,23 +139,31 @@ public class HelloWorldSwing3 {
 
         b1.addActionListener(e -> {
             outputLabel.setText(textField.getText());
+            if(outputLabel.getForeground() == Color.black) {
+                outputLabel.setForeground(Color.red);
+            }
+            else {
+                outputLabel.setForeground(Color.black);
+            }
             if(timeOutCheckBox.isSelected()) {
                 int timeOut = 5;
                 try {
                     timeOut = Integer.parseInt(timeOutTextField.getText());
                     errorLabel.setText("");
+
                 }
                 catch (NumberFormatException ex) {
                     errorLabel.setText("Timeout is not a number.");
                     timeOutTextField.setText("5");
-                    timeOut = 5;
 
                 }
-                t = new Timer(timeOut * 1000, a);
-                t.setRepeats(false);
-                t.start();
                 if(timeOut < 0 || timeOut > 10) {
-                    errorLabel.setText("Timeout must be an integer between 1 and 10.");
+                    errorLabel.setText("Timeout must be between 1 and 10.");
+                }
+                else {
+                    t = new Timer(timeOut * 1000, a);
+                    t.setRepeats(false);
+                    t.start();
                 }
             }
         });

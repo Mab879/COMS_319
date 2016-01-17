@@ -1,13 +1,12 @@
-import java.awt.EventQueue;
+package lab1;
+
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
-import java.awt.FlowLayout;
-import java.awt.Font;
 
 import net.miginfocom.swing.MigLayout;
 import javax.swing.JComboBox;
@@ -48,8 +47,8 @@ public class HelloWorldSwing2 {
      */
     private void initialize() {
         frmHelloworldswing = new JFrame();
-        frmHelloworldswing.setTitle("HelloWorldSwing");
-        frmHelloworldswing.setBounds(100, 100, 450, 300);
+        frmHelloworldswing.setTitle("HelloWorldSwing!");
+        frmHelloworldswing.setSize(370, 220);
         frmHelloworldswing.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
@@ -144,6 +143,12 @@ public class HelloWorldSwing2 {
         panel_2.add(btnNewButton_1);
 
         btnNewButton.addActionListener(e -> {
+            if(labelHelloWorld.getForeground() == Color.black) {
+                labelHelloWorld.setForeground(Color.red);
+            }
+            else {
+                labelHelloWorld.setForeground(Color.black);
+            }
             labelHelloWorld.setText(txtHelloWorld.getText());
         });
 

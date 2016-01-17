@@ -1,7 +1,6 @@
 package lab1;
 
-import java.awt.BorderLayout;
-import java.awt.Font;
+import java.awt.*;
 import javax.swing.*;
 
 public class HelloWorldSwing {
@@ -9,7 +8,7 @@ public class HelloWorldSwing {
     private static JLabel l;
 
     public static void main(String[] args) {
-        JFrame f = new JFrame("HelloWorldSwing");
+        JFrame f = new JFrame("HelloWorldSwing!");
         f.setSize(370, 220);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel m = new JPanel();
@@ -117,6 +116,12 @@ public class HelloWorldSwing {
 
         b1.addActionListener(e -> {
             l.setText(textField.getText());
+            if(l.getForeground() == Color.black) {
+                l.setForeground(Color.red);
+            }
+            else {
+                l.setForeground(Color.black);
+            }
         });
 
         b2.addActionListener(e -> {
