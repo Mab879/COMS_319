@@ -1,6 +1,8 @@
 package lab1;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import static java.lang.Thread.sleep;
@@ -10,6 +12,8 @@ public class HelloWorldSwing3 {
     private static JLabel outputLabel, errorLabel;
     private static JCheckBox timeOutCheckBox;
     private static JFrame f;
+    private static Timer t;
+
     public static void main(String[] args) {
         f = new JFrame("HelloWorldSwing");
         f.setSize(370, 220);
@@ -54,7 +58,7 @@ public class HelloWorldSwing3 {
         timeOutCheckBox = new JCheckBox();
         p.add(timeOutCheckBox);
         p.add(new JLabel("clear after: "));
-        timeOutTextField = new JTextField("5");
+        timeOutTextField = new JTextField("10");
         p.add(timeOutTextField);
         return p;
     }
@@ -124,10 +128,18 @@ public class HelloWorldSwing3 {
         p.add(errorLabel);
         p.add(b2);
 
+        ActionListener a = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField.setText("  ");
+                outputLabel.setText("  ");
+            }
+        };
+
         b1.addActionListener(e -> {
             outputLabel.setText(textField.getText());
             if(timeOutCheckBox.isSelected()) {
-                long timeOut = 5;
+                int timeOut = 5;
                 try {
                     timeOut = Integer.parseInt(timeOutTextField.getText());
                     errorLabel.setText("");
@@ -136,13 +148,16 @@ public class HelloWorldSwing3 {
                     errorLabel.setText("Timeout is not a number.");
                     timeOutTextField.setText("5");
                     timeOut = 5;
+
                 }
-                f.repaint();
+                t = new Timer(timeOut * 1000, a);
+                t.start();
                 if(timeOut < 0 || timeOut > 10) {
                     errorLabel.setText("Timeout must be an integer between 1 and 10.");
                 }
             }
         });
+
 
         b2.addActionListener(e -> {
             System.exit(1);

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="733a0bdc-8cb9-4ebc-ba81-c2086307b197" name="Default" comment="" />
+    <list default="true" id="733a0bdc-8cb9-4ebc-ba81-c2086307b197" name="Default" comment="Work on timeout">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/miglayout15-swing.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/miglayout15_swing.xml" afterPath="$PROJECT_DIR$/.idea/libraries/miglayout15_swing.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java" afterPath="$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java" />
+    </list>
     <ignored path="COMS_319.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="144" column="49" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="49" />
+              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,8 +55,8 @@
       <file leaf-file-name="HelloWorldSwing2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lab1/HelloWorldSwing2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15482695">
-              <caret line="41" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.18579236">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1078#1079#0" expanded="true" />
@@ -85,8 +90,8 @@
         <option value="$PROJECT_DIR$/src/lab1/HelloWorldSwing.form" />
         <option value="$PROJECT_DIR$/src/lab1/HelloWorldSwing.java" />
         <option value="C:/Program Files (x86)/Java/jdk1.8.0_66/src.zip!/javax/swing/JTextField.java" />
-        <option value="$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java" />
         <option value="$PROJECT_DIR$/src/lab1/HelloWorldSwing2.java" />
+        <option value="$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java" />
       </list>
     </option>
   </component>
@@ -139,24 +144,6 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="miglayout15-swing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="miglayout15-swing.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="COMS_319" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -194,15 +181,16 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/workspace/Lab1/miglayout15-swing.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/miglayout15-swing.jar!/" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mab87\IdeaProjects\COMS_319" />
       <recent name="C:\Users\mab87\IdeaProjects\COMS_319\src" />
       <recent name="C:\Users\mab87\IdeaProjects\COMS_319\src\lab1\" />
     </key>
@@ -680,7 +668,7 @@
       <option name="number" value="Default" />
       <updated>1452909376278</updated>
       <workItem from="1452909383724" duration="12168000" />
-      <workItem from="1453057380777" duration="4020000" />
+      <workItem from="1453057380777" duration="6142000" />
     </task>
     <task id="LOCAL-00001" summary="Added radio buttons">
       <created>1452914589605</created>
@@ -736,11 +724,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453061497263</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Work on timeout">
+      <created>1453062364442</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1453062364442</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16188000" />
+    <option name="totallyTimeSpent" value="18310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -792,21 +786,32 @@
     <MESSAGE value="Start the timeout" />
     <MESSAGE value="Work on the Layout Manager" />
     <MESSAGE value="Finsiehd Window manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finsiehd Window manager" />
+    <MESSAGE value="Work on timeout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on timeout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java</url>
-          <line>138</line>
+          <line>154</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="timeoutTextField.getText()" language="JAVA" custom="" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -847,16 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="49" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lab1/HelloWorldSwing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -867,10 +862,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab1/HelloWorldSwing3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lab1/HelloWorldSwing2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15482695">
-          <caret line="41" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.18579236">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1078#1079#0" expanded="true" />
