@@ -14,7 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.DefaultComboBoxModel;
 
-public class HelloWorldSwing {
+public class HelloWorldSwing2 {
 
     private JFrame frmHelloworldswing;
     private JTextField txtHelloWorld;
@@ -27,7 +27,7 @@ public class HelloWorldSwing {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    HelloWorldSwing window = new HelloWorldSwing();
+                    HelloWorldSwing2 window = new HelloWorldSwing2();
                     window.frmHelloworldswing.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -39,7 +39,7 @@ public class HelloWorldSwing {
     /**
      * Create the application.
      */
-    public HelloWorldSwing() {
+    public HelloWorldSwing2() {
         initialize();
     }
 
@@ -143,7 +143,15 @@ public class HelloWorldSwing {
         JButton btnNewButton_1 = new JButton("Exit");
         panel_2.add(btnNewButton_1);
 
-        labelHelloWorld = new JLabel("Hello World!");
+        btnNewButton.addActionListener(e -> {
+            labelHelloWorld.setText(txtHelloWorld.getText());
+        });
+
+        btnNewButton_1.addActionListener(e -> {
+            System.exit(1);
+        });
+
+        labelHelloWorld = new JLabel("Hello World");
         frmHelloworldswing.getContentPane().add(labelHelloWorld, BorderLayout.CENTER);
     }
 
