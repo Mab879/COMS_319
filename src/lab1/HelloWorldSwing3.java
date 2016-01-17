@@ -6,12 +6,12 @@ import javax.swing.*;
 import static java.lang.Thread.sleep;
 
 public class HelloWorldSwing3 {
-    private static JTextField timeoutTextField;
+    private static JTextField textField, timeOutTextField;
     private static JLabel outputLabel, errorLabel;
     private static JCheckBox timeOutCheckBox;
-
+    private static JFrame f;
     public static void main(String[] args) {
-        JFrame f = new JFrame("HelloWorldSwing");
+        f = new JFrame("HelloWorldSwing");
         f.setSize(370, 220);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel m = new JPanel();
@@ -31,8 +31,8 @@ public class HelloWorldSwing3 {
     private static JPanel setupTop() {
         JPanel p = new JPanel();
         p.add(new JLabel("Text: "));
-        timeoutTextField = new JTextField("Hello World!");
-        p.add(timeoutTextField);
+        textField = new JTextField("Hello World!");
+        p.add(textField);
         String[] sizes = { "tiny", "small", "medium", "large" };
         JComboBox<String> combo = new JComboBox<String>(sizes);
         combo.addActionListener(e -> {
@@ -54,8 +54,8 @@ public class HelloWorldSwing3 {
         timeOutCheckBox = new JCheckBox();
         p.add(timeOutCheckBox);
         p.add(new JLabel("clear after: "));
-        JTextField clearTextField = new JTextField("5");
-        p.add(clearTextField);
+        timeOutTextField = new JTextField("5");
+        p.add(timeOutTextField);
         return p;
     }
 
@@ -125,26 +125,21 @@ public class HelloWorldSwing3 {
         p.add(b2);
 
         b1.addActionListener(e -> {
-            outputLabel.setText(timeoutTextField.getText());
+            outputLabel.setText(textField.getText());
             if(timeOutCheckBox.isSelected()) {
                 long timeOut = 5;
                 try {
-                    timeOut = Integer.parseInt(timeoutTextField.getText());
+                    timeOut = Integer.parseInt(timeOutTextField.getText());
+                    errorLabel.setText("");
                 }
                 catch (NumberFormatException ex) {
                     errorLabel.setText("Timeout is not a number.");
-                    timeoutTextField.setText("5");
+                    timeOutTextField.setText("5");
                     timeOut = 5;
                 }
+                f.repaint();
                 if(timeOut < 0 || timeOut > 10) {
                     errorLabel.setText("Timeout must be an integer between 1 and 10.");
-                }
-                else {
-                    try {
-                        sleep(timeOut * 1000);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
                 }
             }
         });
